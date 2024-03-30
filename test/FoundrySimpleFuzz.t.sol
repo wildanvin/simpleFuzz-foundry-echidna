@@ -13,7 +13,13 @@ contract FoundrySimpleFuzz is Test {
     }
 
     function testSimpleDoStuff() public {
-        simpleFuzz.doStuff(12);
+        simpleFuzz.doStuff(1234);
+        assert(simpleFuzz.shouldAlwaysBeZero() == 0);
+    }
+
+    // Stateless fuzzing
+    function testFuzzDoStuff(uint256 x) public {
+        simpleFuzz.doStuff(x);
         assert(simpleFuzz.shouldAlwaysBeZero() == 0);
     }
 }
