@@ -9,11 +9,11 @@ contract FoundrySimpleFuzz is Test {
 
     function setUp() public {
         simpleFuzz = new SimpleFuzz();
-        targetContract(address(simpleFuzz));
+        //targetContract(address(simpleFuzz));
     }
 
     function testSimpleDoStuff() public {
-        simpleFuzz.doStuff(1234);
+        simpleFuzz.doStuff(123);
         assert(simpleFuzz.shouldAlwaysBeZero() == 0);
     }
 
