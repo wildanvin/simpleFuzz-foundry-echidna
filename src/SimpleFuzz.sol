@@ -7,12 +7,12 @@ contract SimpleFuzz {
     uint256 private hiddenValue = 0;
 
     function doStuff (uint256 data) public {
-        // if (data == 1234){
-        //     shouldAlwaysBeZero = 1;
-        // }
-        if (hiddenValue == 5678) {
+        if (data == 1234){
             shouldAlwaysBeZero = 1;
         }
-        hiddenValue = data;
+        // if (hiddenValue == 5678) {
+        //     shouldAlwaysBeZero = 1;
+        // }
+        // hiddenValue = data;
     }
 }
